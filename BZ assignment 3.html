@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #club {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #door {
+        width: 600px;
+        height: 600px;
+        background-color: rgb(188, 221, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      button {
+        padding: 10px 30px;
+        background-color: rgb(255, 212, 210);
+        border: none;
+        margin: 5px;
+        font-size: 2em;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: rgb(252, 247, 194);
+      }
+      form {
+        padding: 40px;
+      }
+      input {
+        display: block;
+        padding: 10px;
+        margin: 20px;
+        font-size: 2em;
+        color: rgb(57, 96, 130);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="club">
+      <form>
+        <input id="favourite food" type="text" placeholder="favourite food" />
+        <input id="areacode" type="number" placeholder="area code" />
+      </form>
+      <div id="door">
+        <button id="enterButton" onclick="tryToEnter()">Submit</button>
+      </div>
+    </div>
+
+    <script>
+      let List= ["pizza", "pasta", "burger", "sushi", "icecream"];
+      let areacode; 
+      let favouritefood= "pizza";
+      function tryToEnter() {
+        areacode = document.getElementById("areacode").value;
+        favouritefood = document.getElementById("favourite food").value;
+
+        let onList = List.find(function (favouritefood) {
+          return favouritefood == name;
+        });
+
+        if (onList || areacode >1000) {
+          document.getElementById("enterButton").style.backgroundColor = "pink";
+        } else {
+          document.getElementById("enterButton").style.backgroundColor = "blue";
+        }
+      }
+    </script>
+  </body>
+</html>
